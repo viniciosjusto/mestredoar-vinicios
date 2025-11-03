@@ -110,24 +110,90 @@
 
     <!-- Seção Curso -->
     <section id="curso" class="bg-gradient-to-br from-blue-50 to-gray-100 section-padding">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Curso Mestre do Ar</h2>
-            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">Aprenda técnicas profissionais de higienização e manutenção de ar condicionado com Vinicius Justo, especialista com anos de experiência no mercado.</p>
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Curso Mestre do Ar</h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
+            Aprenda técnicas profissionais de higienização e manutenção de ar condicionado com Vinicius Justo, 
+            especialista com anos de experiência no mercado.
+        </p>
+        
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto p-8 md:p-12 border border-blue-100">
+            <!-- Benefícios em destaque -->
+            <div class="grid md:grid-cols-2 gap-6 mb-10">
             
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto p-8 border border-blue-100">
-                <div class="text-center">
-                    <h3 class="text-2xl font-bold mb-4 text-gradient">Mestre do Ar Prime</h3>
-                    <p class="text-gray-600 mb-6">Técnica de Higienização e Manutenção Profissional</p>
-                    <p class="mb-8 text-gray-700">Clique no botão abaixo para acessar a página oficial do curso na Hotmart</p>
-                    <a href="https://hotmart.com/pt-br/marketplace/produtos/mestre-do-ar-prime-tec-higienizacao-e-manutencao-profissional/R100144780Q" 
-                       target="_blank" 
-                       class="inline-block gradient-bg hover:opacity-90 text-white font-bold py-4 px-10 rounded-lg transition duration-300 transform hover:scale-105 shadow-md">
-                        Acessar Página do Curso
-                    </a>
+                <div class="text-center p-4 bg-blue-50 rounded-lg">
+                    <div class="text-blue-600 text-3xl mb-2">📱</div>
+                    <h3 class="font-semibold text-gray-800 mb-1">Acesso</h3>
+                    <p class="text-sm text-gray-600">Vitalício</p>
+                </div>
+                <div class="text-center p-4 bg-blue-50 rounded-lg">
+                    <div class="text-blue-600 text-3xl mb-2">💼</div>
+                    <h3 class="font-semibold text-gray-800 mb-1">Suporte</h3>
+                    <p class="text-sm text-gray-600">Especializado</p>
+                </div>
+            </div>
+
+            <!-- Botão de compra customizado -->
+            <div class="text-center">
+                <script type="text/javascript">
+                    function importHotmart(){ 
+                        var imported = document.createElement('script'); 
+                        imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
+                        document.head.appendChild(imported); 
+                        var link = document.createElement('link'); 
+                        link.rel = 'stylesheet'; 
+                        link.type = 'text/css'; 
+                        link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
+                        document.head.appendChild(link);
+                    } 
+                    importHotmart(); 
+                </script>
+                
+                <a onclick="return false;" 
+                   href="https://pay.hotmart.com/R100144780Q?checkoutMode=2" 
+                   class="hotmart-fb hotmart__button-checkout inline-block bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg px-12 py-5 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 no-underline">
+                    <span class="flex items-center justify-center gap-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span>GARANTIR MINHA VAGA AGORA</span>
+                    </span>
+                </a>
+                
+                <p class="mt-6 text-sm text-gray-500 flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    Pagamento 100% seguro | Garantia de 7 dias
+                </p>
+            </div>
+
+            <!-- Informações adicionais -->
+            <div class="mt-8 pt-8 border-t border-gray-200">
+                <div class="flex flex-wrap justify-center gap-8 text-sm text-gray-600">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Aulas práticas</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Material de apoio</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Comunidade exclusiva</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Seção Produtos -->
     <section id="produtos" class="bg-white section-padding">
@@ -151,9 +217,9 @@
                     </div>
                 </div>
                 <div class="md:w-2/3 md:pl-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Sobre Vinicius Justo</h2>
-                    <p class="text-gray-600 mb-4">Especialista em manutenção e higienização de ar condicionado com mais de 10 anos de experiência no mercado. Já treinou centenas de profissionais que hoje atuam com sucesso na área.</p>
-                    <p class="text-gray-600 mb-4">Criador do curso "Mestre do Ar", que já formou mais de 500 alunos em todo o Brasil, com foco em técnicas práticas e eficientes para quem deseja ingressar ou se especializar neste mercado.</p>
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Sobre Vinicios Justo</h2>
+                    <p class="text-gray-600 mb-4">Especialista em manutenção e higienização de ar condicionado com mais de 6 anos de experiência no mercado.</p>
+                    <p class="text-gray-600 mb-4">Criador do curso "Mestre do Ar", com foco em técnicas práticas e eficientes para quem deseja ingressar ou se especializar neste mercado.</p>
                     <div class="flex space-x-4 mt-6">
                         <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
                             <i class="fab fa-instagram text-2xl"></i>
@@ -191,47 +257,61 @@
         // Dados dos produtos (facilmente editáveis)
         const products = [
             {
-                id: 1,
-                title: "Kit Limpeza Ar Condicionado",
-                description: "Kit completo para limpeza e manutenção de ar condicionado split.",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                link: "#"
-            },
-            {
-                id: 2,
-                title: "Limpa Condensadora",
-                description: "Produto especializado para limpeza de condensadoras de ar condicionado.",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                link: "#"
-            },
-            {
-                id: 3,
-                title: "Bomba de Vácuo 3 CFM",
-                description: "Bomba de vácuo profissional para serviços de manutenção em ar condicionado.",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                link: "#"
-            },
-            {
-                id: 4,
-                title: "Manômetro Digital",
-                description: "Manômetro digital para medição de pressão em sistemas de refrigeração.",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                link: "#"
-            },
-            {
-                id: 5,
-                title: "Detector de Vazamento",
-                description: "Detector eletrônico de vazamentos para gases refrigerantes.",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                link: "#"
-            },
-            {
-                id: 6,
-                title: "Flushing para Ar Condicionado",
-                description: "Produto para limpeza interna do sistema de refrigeração.",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                link: "#"
-            }
+    id: 1,
+    title: "Lavadora A Jato De Alta Pressão Portátil Recarregável",
+    description: "Lavadora Jato Portátil de Alta Pressão – Potência e Praticidade para Limpezas Eficazes!",
+    image: "https://http2.mlstatic.com/D_NQ_NP_2X_710810-MLA95660064564_102025-F.webp",
+    link: "https://mercadolivre.com/sec/1NTtL5T"
+},
+{
+    id: 2,
+    title: "Coletor Split Até 36 Mil Btus Para Limpeza Ar Condicionado Cor Azul",
+    description: "Coletor Split Até 36 Mil Btus Para Limpeza Ar Condicionado Cor Azul",
+    image: "https://http2.mlstatic.com/D_NQ_NP_2X_686539-MLA96137594617_102025-F.webp",
+    link: "https://mercadolivre.com/sec/2jaKR8Z"
+},
+{
+    id: 3,
+    title: "Furadeira Parafusadeira Sem Fio A Bateria Tb-12e 12v 3/8 10mm Com Maleta E Acessórios The Black Tools",
+    description: "Furadeira Parafusadeira Sem Fio A Bateria Tb-12e 12v 3/8 10mm Com Maleta E Acessórios The Black Tools",
+    image: "https://http2.mlstatic.com/D_NQ_NP_2X_684354-MLA96114946563_102025-F.webp",
+    link: "https://mercadolivre.com/sec/15VVDt7"
+},
+{
+    id: 4,
+    title: "Desix Floral Bactericida Limpeza Ar Condiciona 1litro - Kit",
+    description: "Desix Floral Bactericida Limpeza Ar Condiciona 1litro - Kit",
+    image: "https://http2.mlstatic.com/D_NQ_NP_2X_699603-MLB88806251460_082025-F.webp",
+    link: "https://mercadolivre.com/sec/2FgS6wd"
+},
+{
+    id: 5,
+    title: "Filme Mascaramento Eletrostático Com Fita Adesiva 1,2m X 20m",
+    description: "Filme Mascaramento Eletrostático Com Fita Adesiva 1,2m X 20m",
+    image: "https://http2.mlstatic.com/D_NQ_NP_2X_912429-MLA95974204413_102025-F.webp",
+    link: "https://mercadolivre.com/sec/2rCMRQb"
+},
+{
+    id: 6,
+    title: "Jogo De Chaves Fenda Phillips Isolada Eletricista Iec60900 Vonder 1.000v",
+    description: "Jogo De Chaves Fenda Phillips Isolada Eletricista Iec60900 Vonder 1.000v",
+    image: "https://http2.mlstatic.com/D_NQ_NP_2X_633368-MLA95695169180_102025-F.webp",
+    link: "https://mercadolivre.com/sec/1yFP5yR"
+},
+{
+    id: 7,
+    title: "Kit 6 Pincel Para Pintura Tinta Latex Acrilica Jogo Pinceis De Pintura P/ Parede Trincha Multiuso Gurumania",
+    description: "Kit 6 Pincel Para Pintura Tinta Latex Acrilica Jogo Pinceis De Pintura P/ Parede Trincha Multiuso Gurumania",
+    image: "https://http2.mlstatic.com/D_NQ_NP_2X_942756-MLA95379749613_102025-F.webp",
+    link: "https://mercadolivre.com/sec/2rUc4ff"
+},
+{
+    id: 8,
+    title: "Escada Residêncial Em Alumínio 5 Degraus Real",
+    description: "Escada Residêncial Em Alumínio 5 Degraus Real",
+    image: "https://http2.mlstatic.com/D_NQ_NP_2X_983696-MLA95836457741_102025-F.webp",
+    link: "https://mercadolivre.com/sec/2KJFtRE"
+}
         ];
 
         // Carregar produtos na página
