@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESTRE DO AR - Vinicius Justo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-padding {
+            padding: 5rem 0;
+        }
+        .product-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-xl md:text-2xl font-bold text-blue-700">MESTRE DO AR</h1>
+                <span class="ml-2 text-xs text-gray-500">Vinicius Justo</span>
+            </div>
+            
+            <!-- Menu Mobile -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-blue-700 font-medium transition duration-300">Home</a>
+                <a href="#curso" class="text-gray-700 hover:text-blue-700 font-medium transition duration-300">Curso</a>
+                <a href="#produtos" class="text-gray-700 hover:text-blue-700 font-medium transition duration-300">Produtos</a>
+                <a href="#sobre" class="text-gray-700 hover:text-blue-700 font-medium transition duration-300">Sobre</a>
+            </nav>
+        </div>
+        
+        <!-- Menu Mobile Expandido -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-700 transition duration-300">Home</a>
+            <a href="#curso" class="block py-2 text-gray-700 hover:text-blue-700 transition duration-300">Curso</a>
+            <a href="#produtos" class="block py-2 text-gray-700 hover:text-blue-700 transition duration-300">Produtos</a>
+            <a href="#sobre" class="block py-2 text-gray-700 hover:text-blue-700 transition duration-300">Sobre</a>
+        </div>
+    </header>
+
+    <!-- Seção Home -->
+    <section id="home" class="hero-bg text-white section-padding">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Domine a Técnica de Limpeza de Ar Condicionado</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Aprenda técnicas profissionais para higienização e manutenção de ar condicionado e transforme seu conhecimento em uma fonte de renda lucrativa.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#curso" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">Conhecer o Curso</a>
+                <a href="#produtos" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">Ver Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Benefícios -->
+    <section class="bg-white section-padding">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Por que escolher nosso curso?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-blue-100 transition duration-300 hover:shadow-lg">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Aprendizado Prático</h3>
+                    <p class="text-gray-600">Metodologia focada em situações reais do dia a dia, com técnicas que você pode aplicar imediatamente.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-blue-100 transition duration-300 hover:shadow-lg">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Ferramentas Certas</h3>
+                    <p class="text-gray-600">Aprenda a usar as ferramentas corretas para cada tipo de serviço, garantindo qualidade e eficiência.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-blue-100 transition duration-300 hover:shadow-lg">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Oportunidade de Negócio</h3>
+                    <p class="text-gray-600">Transforme seu conhecimento em uma fonte de renda estável com um mercado em constante crescimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Curso -->
+    <section id="curso" class="bg-gradient-to-br from-blue-50 to-gray-100 section-padding">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Curso Mestre do Ar</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">Aprenda técnicas profissionais de higienização e manutenção de ar condicionado com Vinicius Justo, especialista com anos de experiência no mercado.</p>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto p-8 border border-blue-100">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-gradient">Mestre do Ar Prime</h3>
+                    <p class="text-gray-600 mb-6">Técnica de Higienização e Manutenção Profissional</p>
+                    <p class="mb-8 text-gray-700">Clique no botão abaixo para acessar a página oficial do curso na Hotmart</p>
+                    <a href="https://hotmart.com/pt-br/marketplace/produtos/mestre-do-ar-prime-tec-higienizacao-e-manutencao-profissional/R100144780Q" 
+                       target="_blank" 
+                       class="inline-block gradient-bg hover:opacity-90 text-white font-bold py-4 px-10 rounded-lg transition duration-300 transform hover:scale-105 shadow-md">
+                        Acessar Página do Curso
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="produtos" class="bg-white section-padding">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Produtos Recomendados</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">Ferramentas e equipamentos essenciais para quem quer atuar profissionalmente na limpeza de ar condicionado.</p>
+            
+            <div id="products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Os produtos serão carregados dinamicamente via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="bg-gradient-to-br from-blue-50 to-gray-100 section-padding">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <div class="gradient-bg rounded-full w-48 h-48 mx-auto flex items-center justify-center text-white text-6xl shadow-lg">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Sobre Vinicius Justo</h2>
+                    <p class="text-gray-600 mb-4">Especialista em manutenção e higienização de ar condicionado com mais de 10 anos de experiência no mercado. Já treinou centenas de profissionais que hoje atuam com sucesso na área.</p>
+                    <p class="text-gray-600 mb-4">Criador do curso "Mestre do Ar", que já formou mais de 500 alunos em todo o Brasil, com foco em técnicas práticas e eficientes para quem deseja ingressar ou se especializar neste mercado.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">MESTRE DO AR</h3>
+                    <p class="text-gray-400">Vinicius Justo</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">© 2023 Mestre do Ar. Todos os direitos reservados.</p>
+                    <p class="text-gray-400 mt-2">Contato: contato@mestredoar.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Dados dos produtos (facilmente editáveis)
+        const products = [
+            {
+                id: 1,
+                title: "Kit Limpeza Ar Condicionado",
+                description: "Kit completo para limpeza e manutenção de ar condicionado split.",
+                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                link: "#"
+            },
+            {
+                id: 2,
+                title: "Limpa Condensadora",
+                description: "Produto especializado para limpeza de condensadoras de ar condicionado.",
+                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                link: "#"
+            },
+            {
+                id: 3,
+                title: "Bomba de Vácuo 3 CFM",
+                description: "Bomba de vácuo profissional para serviços de manutenção em ar condicionado.",
+                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                link: "#"
+            },
+            {
+                id: 4,
+                title: "Manômetro Digital",
+                description: "Manômetro digital para medição de pressão em sistemas de refrigeração.",
+                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                link: "#"
+            },
+            {
+                id: 5,
+                title: "Detector de Vazamento",
+                description: "Detector eletrônico de vazamentos para gases refrigerantes.",
+                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                link: "#"
+            },
+            {
+                id: 6,
+                title: "Flushing para Ar Condicionado",
+                description: "Produto para limpeza interna do sistema de refrigeração.",
+                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                link: "#"
+            }
+        ];
+
+        // Carregar produtos na página
+        document.addEventListener('DOMContentLoaded', function() {
+            const productsContainer = document.getElementById('products-container');
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100';
+                productCard.innerHTML = `
+                    <div class="relative overflow-hidden">
+                        <img src="${product.image}" alt="${product.title}" class="w-full h-48 object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-3 text-gray-800">${product.title}</h3>
+                        <p class="text-gray-600 mb-6">${product.description}</p>
+                        <div class="flex justify-center">
+                            <a href="${product.link}" target="_blank" class="gradient-bg hover:opacity-90 text-white font-medium py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-md w-full text-center">
+                                Comprar no Mercado Livre
+                            </a>
+                        </div>
+                    </div>
+                `;
+                productsContainer.appendChild(productCard);
+            });
+
+            // Menu mobile
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Fechar menu ao clicar em um link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
