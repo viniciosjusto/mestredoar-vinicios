@@ -3,361 +3,635 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MESTRE DO AR - Vinicius Justo</title>
+    <meta name="description" content="Aprenda técnicas profissionais de limpeza e manutenção de ar condicionado com Vinicius Justo. Transforme seu conhecimento em renda.">
+    <title>MESTRE DO AR - Vinicius Justo | Curso de Limpeza de Ar Condicionado</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hotmart Widget -->
+    <script type="text/javascript">
+        function importHotmart(){ 
+            var imported = document.createElement('script'); 
+            imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
+            document.head.appendChild(imported); 
+            var link = document.createElement('link'); 
+            link.rel = 'stylesheet'; 
+            link.type = 'text/css'; 
+            link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
+            document.head.appendChild(link);
+        } 
+        importHotmart(); 
+    </script>
+    
     <style>
-        .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Hero Section Background */
+        .hero-section {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                              url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
-        .section-padding {
-            padding: 5rem 0;
-        }
-        .product-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        .gradient-bg {
+        
+        /* Gradient Background */
+        .gradient-blue {
             background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
         }
+        
+        /* Text Gradient */
         .text-gradient {
             background: linear-gradient(135deg, #1e40af, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Card Hover Effect */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Button Animations */
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Product Card Image */
+        .product-image {
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+        
+        /* Menu Mobile Animation */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            max-height: 300px;
+        }
+        
+        /* Loading Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        /* Section Padding */
+        .section-padding {
+            padding: 5rem 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 3rem 1rem;
+            }
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
-    <!-- Cabeçalho -->
+    
+    <!-- ========== CABEÇALHO ========== -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <h1 class="text-xl md:text-2xl font-bold text-blue-700">MESTRE DO AR</h1>
-                <span class="ml-2 text-xs text-gray-500">Vinicios Justo</span>
-            </div>
-            
-            <!-- Menu Mobile -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-700 focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <h1 class="text-2xl font-bold text-blue-700">MESTRE DO AR</h1>
+                    <span class="text-xs text-gray-500 hidden sm:inline">Vinicius Justo</span>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-700 font-medium transition-colors duration-300">Home</a>
+                    <a href="#curso" class="text-gray-700 hover:text-blue-700 font-medium transition-colors duration-300">Curso</a>
+                    <a href="#produtos" class="text-gray-700 hover:text-blue-700 font-medium transition-colors duration-300">Produtos</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-blue-700 font-medium transition-colors duration-300">Sobre</a>
+                </nav>
+                
+                <!-- Botão Menu Mobile -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-600 hover:text-blue-700 focus:outline-none" aria-label="Menu">
+                    <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
             
-            <!-- Menu Desktop -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-700 hover:text-blue-700 font-medium transition duration-300">Home</a>
-                <a href="#curso" class="text-gray-700 hover:text-blue-700 font-medium transition duration-300">Curso</a>
-                <a href="#produtos" class="text-gray-700 hover:text-blue-700 font-medium transition duration-300">Produtos</a>
-                <a href="#sobre" class="text-gray-700 hover:text-blue-700 font-medium transition duration-300">Sobre</a>
-            </nav>
-        </div>
-        
-        <!-- Menu Mobile Expandido -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
-            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-700 transition duration-300">Home</a>
-            <a href="#curso" class="block py-2 text-gray-700 hover:text-blue-700 transition duration-300">Curso</a>
-            <a href="#produtos" class="block py-2 text-gray-700 hover:text-blue-700 transition duration-300">Produtos</a>
-            <a href="#sobre" class="block py-2 text-gray-700 hover:text-blue-700 transition duration-300">Sobre</a>
+            <!-- Menu Mobile -->
+            <div id="mobileMenu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
+                <nav class="py-4 space-y-2">
+                    <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-300 rounded">Home</a>
+                    <a href="#curso" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-300 rounded">Curso</a>
+                    <a href="#produtos" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-300 rounded">Produtos</a>
+                    <a href="#sobre" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-300 rounded">Sobre</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <!-- Seção Home -->
-    <section id="home" class="hero-bg text-white section-padding">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Domine a Técnica de Limpeza de Ar Condicionado</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Aprenda técnicas profissionais para higienização e manutenção de ar condicionado e transforme seu conhecimento em uma fonte de renda lucrativa.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#curso" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">Conhecer o Curso</a>
-                <a href="#produtos" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">Ver Produtos</a>
+    <!-- ========== SEÇÃO HERO ========== -->
+    <section id="home" class="hero-section text-white section-padding min-h-screen flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Domine a Técnica de Limpeza de Ar Condicionado
+                </h2>
+                <p class="text-xl md:text-2xl mb-10 leading-relaxed">
+                    Aprenda técnicas profissionais para higienização e manutenção de ar condicionado e transforme seu conhecimento em uma fonte de renda lucrativa.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                    <a href="#curso" class="btn-primary gradient-blue text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg">
+                        Conhecer o Curso
+                    </a>
+                    <a href="#produtos" class="btn-primary bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-white hover:text-blue-700">
+                        Ver Produtos
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Benefícios -->
+    <!-- ========== SEÇÃO BENEFÍCIOS ========== -->
     <section class="bg-white section-padding">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Por que escolher nosso curso?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-blue-100 transition duration-300 hover:shadow-lg">
-                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
+                Por que escolher nosso curso?
+            </h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Aprenda com quem realmente entende do assunto e transforme sua carreira
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Benefício 1 -->
+                <div class="card-hover text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100">
+                    <div class="gradient-blue w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-graduation-cap text-white text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Aprendizado Prático</h3>
-                    <p class="text-gray-600">Metodologia focada em situações reais do dia a dia, com técnicas que você pode aplicar imediatamente.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Aprendizado Prático</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Metodologia focada em situações reais do dia a dia, com técnicas que você pode aplicar imediatamente.
+                    </p>
                 </div>
-                <div class="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-blue-100 transition duration-300 hover:shadow-lg">
-                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-tools text-white text-2xl"></i>
+                
+                <!-- Benefício 2 -->
+                <div class="card-hover text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100">
+                    <div class="gradient-blue w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-tools text-white text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Ferramentas Certas</h3>
-                    <p class="text-gray-600">Aprenda a usar as ferramentas corretas para cada tipo de serviço, garantindo qualidade e eficiência.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Ferramentas Certas</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Aprenda a usar as ferramentas corretas para cada tipo de serviço, garantindo qualidade e eficiência.
+                    </p>
                 </div>
-                <div class="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-blue-100 transition duration-300 hover:shadow-lg">
-                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                
+                <!-- Benefício 3 -->
+                <div class="card-hover text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100">
+                    <div class="gradient-blue w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i class="fas fa-chart-line text-white text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Oportunidade de Negócio</h3>
-                    <p class="text-gray-600">Transforme seu conhecimento em uma fonte de renda estável com um mercado em constante crescimento.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Oportunidade de Negócio</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Transforme seu conhecimento em uma fonte de renda estável com um mercado em constante crescimento.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Curso -->
+    <!-- ========== SEÇÃO CURSO ========== -->
     <section id="curso" class="bg-gradient-to-br from-blue-50 to-gray-100 section-padding">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Curso Mestre do Ar</h2>
-        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-lg">
-            Aprenda técnicas profissionais de higienização e manutenção de ar condicionado com Vinicius Justo, 
-            especialista com anos de experiência no mercado.
-        </p>
-        
-        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto p-8 md:p-12 border border-blue-100">
-            <!-- Benefícios em destaque -->
-            <div class="grid md:grid-cols-2 gap-6 mb-10">
-            
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                    <div class="text-blue-600 text-3xl mb-2">📱</div>
-                    <h3 class="font-semibold text-gray-800 mb-1">Acesso</h3>
-                    <p class="text-sm text-gray-600">Vitalício</p>
-                </div>
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                    <div class="text-blue-600 text-3xl mb-2">💼</div>
-                    <h3 class="font-semibold text-gray-800 mb-1">Suporte</h3>
-                    <p class="text-sm text-gray-600">Especializado</p>
-                </div>
-            </div>
-
-            <!-- Botão de compra customizado -->
-            <div class="text-center">
-                <script type="text/javascript">
-                    function importHotmart(){ 
-                        var imported = document.createElement('script'); 
-                        imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
-                        document.head.appendChild(imported); 
-                        var link = document.createElement('link'); 
-                        link.rel = 'stylesheet'; 
-                        link.type = 'text/css'; 
-                        link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
-                        document.head.appendChild(link);
-                    } 
-                    importHotmart(); 
-                </script>
-                
-                <a onclick="return false;" 
-                   href="https://pay.hotmart.com/R100144780Q?checkoutMode=2" 
-                   class="hotmart-fb hotmart__button-checkout inline-block bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg px-12 py-5 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 no-underline">
-                    <span class="flex items-center justify-center gap-3">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                        <span>GARANTIR MINHA VAGA AGORA</span>
-                    </span>
-                </a>
-                
-                <p class="mt-6 text-sm text-gray-500 flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                    </svg>
-                    Pagamento 100% seguro | Garantia de 7 dias
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 text-gray-800">
+                    Curso Mestre do Ar
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Aprenda técnicas profissionais de higienização e manutenção de ar condicionado com Vinicius Justo, 
+                    especialista com anos de experiência no mercado.
                 </p>
             </div>
+            
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-5xl mx-auto border-2 border-blue-100">
+                <div class="p-8 md:p-12">
+                    <!-- Destaques do Curso -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                        <div class="text-center p-6 bg-blue-50 rounded-2xl">
+                            <div class="text-5xl mb-3">📱</div>
+                            <h3 class="font-bold text-xl text-gray-800 mb-2">Acesso Vitalício</h3>
+                            <p class="text-gray-600">Aprenda no seu ritmo, quando e onde quiser</p>
+                        </div>
+                        
+                        <div class="text-center p-6 bg-blue-50 rounded-2xl">
+                            <div class="text-5xl mb-3">💼</div>
+                            <h3 class="font-bold text-xl text-gray-800 mb-2">Suporte Especializado</h3>
+                            <p class="text-gray-600">Tire suas dúvidas com profissionais experientes</p>
+                        </div>
+                    </div>
 
-            <!-- Informações adicionais -->
-            <div class="mt-8 pt-8 border-t border-gray-200">
-                <div class="flex flex-wrap justify-center gap-8 text-sm text-gray-600">
-                    <div class="flex items-center gap-2">
-                        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span>Aulas práticas</span>
+                    <!-- Botão de Compra -->
+                    <div class="text-center mb-10">
+                        <a onclick="return false;" 
+                           href="https://pay.hotmart.com/R100144780Q?checkoutMode=2" 
+                           class="hotmart-fb hotmart__button-checkout inline-flex items-center justify-center gap-3 gradient-blue text-white font-bold text-lg px-12 py-5 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 no-underline">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                            <span>GARANTIR MINHA VAGA AGORA</span>
+                        </a>
+                        
+                        <p class="mt-6 text-sm text-gray-500 flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                            Pagamento 100% seguro | Garantia de 7 dias
+                        </p>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span>Material de apoio</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span>Comunidade exclusiva</span>
+
+                    <!-- Informações Adicionais -->
+                    <div class="pt-8 border-t border-gray-200">
+                        <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                            <div class="flex items-center gap-2 text-gray-700">
+                                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="font-medium">Aulas práticas</span>
+                            </div>
+                            
+                            <div class="flex items-center gap-2 text-gray-700">
+                                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="font-medium">Material de apoio</span>
+                            </div>
+                            
+                            <div class="flex items-center gap-2 text-gray-700">
+                                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="font-medium">Comunidade exclusiva</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Seção Produtos -->
+    <!-- ========== SEÇÃO PRODUTOS ========== -->
     <section id="produtos" class="bg-white section-padding">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Produtos Recomendados</h2>
-            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">Ferramentas e equipamentos essenciais para quem quer atuar profissionalmente na limpeza de ar condicionado.</p>
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+                    Produtos Recomendados
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Ferramentas e equipamentos essenciais para quem quer atuar profissionalmente na limpeza de ar condicionado.
+                </p>
+            </div>
             
-            <div id="products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Os produtos serão carregados dinamicamente via JavaScript -->
+            <!-- Container de Produtos -->
+            <div id="productsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <!-- Produtos serão carregados via JavaScript -->
+            </div>
+            
+            <!-- Mensagem de Loading -->
+            <div id="loadingProducts" class="text-center py-12">
+                <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+                <p class="mt-4 text-gray-600">Carregando produtos...</p>
+            </div>
+            
+            <!-- Mensagem de Erro -->
+            <div id="errorProducts" class="hidden text-center py-12">
+                <i class="fas fa-exclamation-triangle text-4xl text-red-500 mb-4"></i>
+                <p class="text-gray-600">Erro ao carregar produtos. Tente recarregar a página.</p>
             </div>
         </div>
     </section>
 
-    <!-- Seção Sobre -->
+    <!-- ========== SEÇÃO SOBRE ========== -->
     <section id="sobre" class="bg-gradient-to-br from-blue-50 to-gray-100 section-padding">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-8 md:mb-0">
-                    <div class="gradient-bg rounded-full w-48 h-48 mx-auto flex items-center justify-center shadow-lg overflow-hidden">
-                        <img src="img/perfil.png" alt="Vinicius Justo" class="w-full h-full object-cover">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <!-- Foto do Instrutor -->
+                    <div class="md:w-1/3">
+                        <div class="gradient-blue rounded-full w-64 h-64 mx-auto flex items-center justify-center shadow-2xl overflow-hidden ring-4 ring-white">
+                            <img src="img/perfil.png" alt="Vinicius Justo" class="w-full h-full object-cover">
+                        </div>
                     </div>
-                </div>
-                <div class="md:w-2/3 md:pl-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Sobre Vinicios Justo</h2>
-                    <p class="text-gray-600 mb-4">Especialista em manutenção e higienização de ar condicionado com mais de 6 anos de experiência no mercado.</p>
-                    <p class="text-gray-600 mb-4">Criador do curso "Mestre do Ar", com foco em técnicas práticas e eficientes para quem deseja ingressar ou se especializar neste mercado.</p>
-                    <div class="flex space-x-4 mt-6">
-                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
-                            <i class="fab fa-instagram text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
-                            <i class="fab fa-facebook text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300">
-                            <i class="fab fa-youtube text-2xl"></i>
-                        </a>
+                    
+                    <!-- Informações -->
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+                            Sobre Vinicius Justo
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                            Especialista em manutenção e higienização de ar condicionado com mais de 6 anos de experiência no mercado.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            Criador do curso "Mestre do Ar", com foco em técnicas práticas e eficientes para quem deseja ingressar ou se especializar neste mercado.
+                        </p>
+                        
+                        <!-- Redes Sociais -->
+                        <div class="flex justify-center md:justify-start gap-4 mt-8">
+                            <a href="#" class="gradient-blue w-12 h-12 rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity duration-300 shadow-lg" aria-label="Instagram">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="gradient-blue w-12 h-12 rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity duration-300 shadow-lg" aria-label="Facebook">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                            <a href="#" class="gradient-blue w-12 h-12 rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity duration-300 shadow-lg" aria-label="YouTube">
+                                <i class="fab fa-youtube text-xl"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer class="bg-gray-800 text-white py-8">
+    <!-- ========== RODAPÉ ========== -->
+    <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold">MESTRE DO AR</h3>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <!-- Informações da Empresa -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-2">MESTRE DO AR</h3>
                     <p class="text-gray-400">Vinicius Justo</p>
                 </div>
+                
+                <!-- Informações de Contato -->
                 <div class="text-center md:text-right">
-                    <p class="text-gray-400">© 2025 Mestre do Ar. Todos os direitos reservados.</p>
-                    <p class="text-gray-400 mt-2">Contato: (51) 98344-2556</p>
+                    <p class="text-gray-400 mb-2">© 2025 Mestre do Ar. Todos os direitos reservados.</p>
+                    <p class="text-gray-400 flex items-center justify-center md:justify-end gap-2">
+                        <i class="fas fa-phone"></i>
+                        Contato: (51) 98344-2556
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- ========== JAVASCRIPT ========== -->
     <script>
-        // Dados dos produtos (facilmente editáveis)
-const products = [
-    {
-        id: 1,
-        title: "Lavadora A Jato De Alta Pressão Portátil Recarregável",
-        description: "Lavadora Jato Portátil de Alta Pressão – Potência e Praticidade para Limpezas Eficazes!",
-        image: "https://http2.mlstatic.com/D_NQ_NP_2X_710810-MLA95660064564_102025-F.webp",
-        link: "https://mercadolivre.com/sec/12QoPR4"
-    },
-    {
-        id: 2,
-        title: "Coletor Split Até 36 Mil Btus Para Limpeza Ar Condicionado Cor Azul",
-        description: "Coletor Split Até 36 Mil Btus Para Limpeza Ar Condicionado Cor Azul",
-        image: "https://http2.mlstatic.com/D_NQ_NP_2X_686539-MLA96137594617_102025-F.webp",
-        link: "https://mercadolivre.com/sec/2jaKR8Z"
-    },
-    {
-        id: 3,
-        title: "Furadeira Parafusadeira Sem Fio A Bateria Tb-12e 12v 3/8 10mm Com Maleta E Acessórios The Black Tools",
-        description: "Furadeira Parafusadeira Sem Fio A Bateria Tb-12e 12v 3/8 10mm Com Maleta E Acessórios The Black Tools",
-        image: "https://http2.mlstatic.com/D_NQ_NP_2X_684354-MLA96114946563_102025-F.webp",
-        link: "https://mercadolivre.com/sec/2qNSKMJ"
-    },
-    {
-        id: 4,
-        title: "Desix Floral Bactericida Limpeza Ar Condiciona 1litro - Kit",
-        description: "Desix Floral Bactericida Limpeza Ar Condiciona 1litro - Kit",
-        image: "https://http2.mlstatic.com/D_NQ_NP_2X_699603-MLB88806251460_082025-F.webp",
-        link: "https://mercadolivre.com/sec/2VHhn2x"
-    },
-    {
-        id: 5,
-        title: "Filme Mascaramento Eletrostático Com Fita Adesiva 1,2m X 20m",
-        description: "Filme Mascaramento Eletrostático Com Fita Adesiva 1,2m X 20m",
-        image: "https://http2.mlstatic.com/D_NQ_NP_2X_912429-MLA95974204413_102025-F.webp",
-        link: "https://mercadolivre.com/sec/2rCMRQb"
-    },
-    {
-        id: 6,
-        title: "Jogo De Chaves Fenda Phillips Isolada Eletricista Iec60900 Vonder 1.000v",
-        description: "Jogo De Chaves Fenda Phillips Isolada Eletricista Iec60900 Vonder 1.000v",
-        image: "https://http2.mlstatic.com/D_NQ_NP_2X_633368-MLA95695169180_102025-F.webp",
-        link: "https://mercadolivre.com/sec/1yFP5yR"
-    },
-    {
-        id: 7,
-        title: "Kit 6 Pincel Para Pintura Tinta Latex Acrilica Jogo Pinceis De Pintura P/ Parede Trincha Multiuso Gurumania",
-        description: "Kit 6 Pincel Para Pintura Tinta Latex Acrilica Jogo Pinceis De Pintura P/ Parede Trincha Multiuso Gurumania",
-        image: "https://http2.mlstatic.com/D_NQ_NP_2X_942756-MLA95379749613_102025-F.webp",
-        link: "https://mercadolivre.com/sec/2rUc4ff"
-    },
-    {
-        id: 8,
-        title: "Escada Residêncial Em Alumínio 5 Degraus Real",
-        description: "Escada Residêncial Em Alumínio 5 Degraus Real",
-        image: "https://http2.mlstatic.com/D_NQ_NP_2X_983696-MLA95836457741_102025-F.webp",
-        link: "https://mercadolivre.com/sec/1Ma71fB"
-    }   
-];
+        // ==================== DADOS DOS PRODUTOS ====================
+        const productsData = [
+            {
+                id: 1,
+                title: "Lavadora A Jato De Alta Pressão Portátil Recarregável",
+                description: "Lavadora Jato Portátil de Alta Pressão – Potência e Praticidade para Limpezas Eficazes!",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_710810-MLA95660064564_102025-F.webp",
+                link: "https://mercadolivre.com/sec/12QoPR4"
+            },
+            {
+                id: 2,
+                title: "Coletor Split Até 36 Mil Btus Para Limpeza Ar Condicionado Cor Azul",
+                description: "Coletor Split Até 36 Mil Btus Para Limpeza Ar Condicionado Cor Azul",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_686539-MLA96137594617_102025-F.webp",
+                link: "https://mercadolivre.com/sec/2jaKR8Z"
+            },
+            {
+                id: 3,
+                title: "Furadeira Parafusadeira Sem Fio A Bateria Tb-12e 12v 3/8 10mm Com Maleta E Acessórios The Black Tools",
+                description: "Furadeira Parafusadeira Sem Fio A Bateria Tb-12e 12v 3/8 10mm Com Maleta E Acessórios The Black Tools",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_684354-MLA96114946563_102025-F.webp",
+                link: "https://mercadolivre.com/sec/2qNSKMJ"
+            },
+            {
+                id: 4,
+                title: "Desix Floral Bactericida Limpeza Ar Condiciona 1litro - Kit",
+                description: "Desix Floral Bactericida Limpeza Ar Condiciona 1litro - Kit",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_699603-MLB88806251460_082025-F.webp",
+                link: "https://mercadolivre.com/sec/2VHhn2x"
+            },
+            {
+                id: 5,
+                title: "Filme Mascaramento Eletrostático Com Fita Adesiva 1,2m X 20m",
+                description: "Filme Mascaramento Eletrostático Com Fita Adesiva 1,2m X 20m",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_912429-MLA95974204413_102025-F.webp",
+                link: "https://mercadolivre.com/sec/2rCMRQb"
+            },
+            {
+                id: 6,
+                title: "Jogo De Chaves Fenda Phillips Isolada Eletricista Iec60900 Vonder 1.000v",
+                description: "Jogo De Chaves Fenda Phillips Isolada Eletricista Iec60900 Vonder 1.000v",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_633368-MLA95695169180_102025-F.webp",
+                link: "https://mercadolivre.com/sec/1yFP5yR"
+            },
+            {
+                id: 7,
+                title: "Kit 6 Pincel Para Pintura Tinta Latex Acrilica Jogo Pinceis De Pintura P/ Parede Trincha Multiuso Gurumania",
+                description: "Kit 6 Pincel Para Pintura Tinta Latex Acrilica Jogo Pinceis De Pintura P/ Parede Trincha Multiuso Gurumania",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_942756-MLA95379749613_102025-F.webp",
+                link: "https://mercadolivre.com/sec/2rUc4ff"
+            },
+            {
+                id: 8,
+                title: "Escada Residêncial Em Alumínio 5 Degraus Real",
+                description: "Escada Residêncial Em Alumínio 5 Degraus Real",
+                image: "https://http2.mlstatic.com/D_NQ_NP_2X_983696-MLA95836457741_102025-F.webp",
+                link: "https://mercadolivre.com/sec/1Ma71fB"
+            }
+        ];
 
-// Carregar produtos na página
-document.addEventListener('DOMContentLoaded', function() {
-    const productsContainer = document.getElementById('products-container');
-    
-    if (!productsContainer) {
-        console.error('Elemento products-container não encontrado!');
-        return;
-    }
-    
-    products.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.className = 'product-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100';
-        productCard.innerHTML = `
-            <div class="relative overflow-hidden">
-                <img src="${product.image}" alt="${product.title}" class="w-full h-48 object-cover transition duration-500 hover:scale-105">
-            </div>
-            <div class="p-6">
-                <h3 class="font-bold text-xl mb-3 text-gray-800">${product.title}</h3>
-                <p class="text-gray-600 mb-6">${product.description}</p>
-                <div class="flex justify-center">
-                    <a href="${product.link}" target="_blank" class="gradient-bg hover:opacity-90 text-white font-medium py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-md w-full text-center">
+        // ==================== FUNÇÕES PRINCIPAIS ====================
+        
+        // Função para criar card de produto
+        function createProductCard(product) {
+            const card = document.createElement('div');
+            card.className = 'product-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 card-hover fade-in';
+            
+            card.innerHTML = `
+                <div class="relative overflow-hidden h-56 bg-gray-100">
+                    <img 
+                        src="${product.image}" 
+                        alt="${product.title}" 
+                        class="product-image w-full h-full object-cover"
+                        loading="lazy"
+                        onerror="this.src='https://via.placeholder.com/300x300?text=Produto'"
+                    >
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-3 text-gray-800 line-clamp-2 min-h-[3.5rem]">
+                        ${product.title}
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-6 line-clamp-2">
+                        ${product.description}
+                    </p>
+                    <a 
+                        href="${product.link}" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="block gradient-blue text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 hover:opacity-90 hover:shadow-lg"
+                    >
+                        <i class="fas fa-shopping-cart mr-2"></i>
                         Comprar no Mercado Livre
                     </a>
                 </div>
-            </div>
-        `;
-        productsContainer.appendChild(productCard);
-    });
-
-    // Menu mobile
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Fechar menu ao clicar em um link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.add('hidden');
+            `;
+            
+            return card;
+        }
+        
+        // Função para carregar todos os produtos
+        function loadProducts() {
+            const container = document.getElementById('productsContainer');
+            const loading = document.getElementById('loadingProducts');
+            const error = document.getElementById('errorProducts');
+            
+            try {
+                // Limpar container
+                container.innerHTML = '';
+                
+                // Verificar se há produtos
+                if (!productsData || productsData.length === 0) {
+                    throw new Error('Nenhum produto encontrado');
+                }
+                
+                // Criar e adicionar cards de produtos
+                productsData.forEach((product, index) => {
+                    const card = createProductCard(product);
+                    // Adicionar delay na animação para efeito cascata
+                    card.style.animationDelay = `${index * 0.1}s`;
+                    container.appendChild(card);
+                });
+                
+                // Esconder loading
+                loading.classList.add('hidden');
+                
+                console.log(`✅ ${productsData.length} produtos carregados com sucesso!`);
+                
+            } catch (err) {
+                console.error('❌ Erro ao carregar produtos:', err);
+                loading.classList.add('hidden');
+                error.classList.remove('hidden');
+            }
+        }
+        
+        // ==================== MENU MOBILE ====================
+        function initMobileMenu() {
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            
+            // Toggle menu
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                
+                // Mudar ícone
+                const icon = menuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             });
+            
+            // Fechar menu ao clicar em link
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    const icon = menuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+            
+            // Fechar menu ao clicar fora
+            document.addEventListener('click', (e) => {
+                if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.remove('active');
+                    const icon = menuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+        
+        // ==================== SMOOTH SCROLL ====================
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // ==================== INICIALIZAÇÃO ====================
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🚀 Inicializando Mestre do Ar...');
+            
+            // Carregar produtos
+            loadProducts();
+            
+            // Inicializar menu mobile
+            initMobileMenu();
+            
+            // Inicializar smooth scroll
+            initSmoothScroll();
+            
+            console.log('✅ Página carregada com sucesso!');
         });
-    }
-});
+        
+        // ==================== LOG DE DEBUG ====================
+        console.log('📦 Total de produtos disponíveis:', productsData.length);
+    </script>
+
+</body>
+</html>
