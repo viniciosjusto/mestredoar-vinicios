@@ -434,66 +434,206 @@
     </footer>
 
     <!-- ========== JAVASCRIPT ========== -->
-    <script>
-        // ==================== DADOS DOS PRODUTOS ====================
-        const productsData = [
-            {
-                id: 1,
-                title: "Lavadora A Jato De Alta Pressão Portátil Recarregável",
-                description: "Lavadora Jato Portátil de Alta Pressão – Potência e Praticidade para Limpezas Eficazes!",
-                image: "https://http2.mlstatic.com/D_NQ_NP_2X_710810-MLA95660064564_102025-F.webp",
-                link: "https://mercadolivre.com/sec/12QoPR4"
-            },
-            {
-                id: 2,
-                title: "Coletor Split Até 36 Mil Btus Para Limpeza Ar Condicionado Cor Azul",
-                description: "Coletor Split Até 36 Mil Btus Para Limpeza Ar Condicionado Cor Azul",
-                image: "https://http2.mlstatic.com/D_NQ_NP_2X_686539-MLA96137594617_102025-F.webp",
-                link: "https://mercadolivre.com/sec/2jaKR8Z"
-            },
-            {
-                id: 3,
-                title: "Furadeira Parafusadeira Sem Fio A Bateria Tb-12e 12v 3/8 10mm Com Maleta E Acessórios The Black Tools",
-                description: "Furadeira Parafusadeira Sem Fio A Bateria Tb-12e 12v 3/8 10mm Com Maleta E Acessórios The Black Tools",
-                image: "https://http2.mlstatic.com/D_NQ_NP_2X_684354-MLA96114946563_102025-F.webp",
-                link: "https://mercadolivre.com/sec/2qNSKMJ"
-            },
-            {
-                id: 4,
-                title: "Desix Floral Bactericida Limpeza Ar Condiciona 1litro - Kit",
-                description: "Desix Floral Bactericida Limpeza Ar Condiciona 1litro - Kit",
-                image: "https://http2.mlstatic.com/D_NQ_NP_2X_699603-MLB88806251460_082025-F.webp",
-                link: "https://mercadolivre.com/sec/2VHhn2x"
-            },
-            {
-                id: 5,
-                title: "Filme Mascaramento Eletrostático Com Fita Adesiva 1,2m X 20m",
-                description: "Filme Mascaramento Eletrostático Com Fita Adesiva 1,2m X 20m",
-                image: "https://http2.mlstatic.com/D_NQ_NP_2X_912429-MLA95974204413_102025-F.webp",
-                link: "https://mercadolivre.com/sec/2rCMRQb"
-            },
-            {
-                id: 6,
-                title: "Jogo De Chaves Fenda Phillips Isolada Eletricista Iec60900 Vonder 1.000v",
-                description: "Jogo De Chaves Fenda Phillips Isolada Eletricista Iec60900 Vonder 1.000v",
-                image: "https://http2.mlstatic.com/D_NQ_NP_2X_633368-MLA95695169180_102025-F.webp",
-                link: "https://mercadolivre.com/sec/1yFP5yR"
-            },
-            {
-                id: 7,
-                title: "Kit 6 Pincel Para Pintura Tinta Latex Acrilica Jogo Pinceis De Pintura P/ Parede Trincha Multiuso Gurumania",
-                description: "Kit 6 Pincel Para Pintura Tinta Latex Acrilica Jogo Pinceis De Pintura P/ Parede Trincha Multiuso Gurumania",
-                image: "https://http2.mlstatic.com/D_NQ_NP_2X_942756-MLA95379749613_102025-F.webp",
-                link: "https://mercadolivre.com/sec/2rUc4ff"
-            },
-            {
-                id: 8,
-                title: "Escada Residêncial Em Alumínio 5 Degraus Real",
-                description: "Escada Residêncial Em Alumínio 5 Degraus Real",
-                image: "https://http2.mlstatic.com/D_NQ_NP_2X_983696-MLA95836457741_102025-F.webp",
-                link: "https://mercadolivre.com/sec/1Ma71fB"
-            }
-        ];
+<script>
+    // ==================== DADOS DOS PRODUTOS ====================
+    const productsData = [
+        {
+            id: 1,
+            title: "Lavadora A Jato De Alta Pressão Portátil Recarregável",
+            description: "Lavadora Jato Portátil de Alta Pressão – Potência e Praticidade para Limpezas Eficazes!",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_710810-MLA95660064564_102025-F.webp",
+            link: "https://mercadolivre.com/sec/12QoPR4"
+        },
+        {
+            id: 2,
+            title: "Coletor Split Até 36 Mil Btus Para Limpeza Ar Condicionado Cor Azul",
+            description: "Coletor Split Até 36 Mil Btus Para Limpeza Ar Condicionado Cor Azul",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_686539-MLA96137594617_102025-F.webp",
+            link: "https://mercadolivre.com/sec/2jaKR8Z"
+        },
+        {
+            id: 3,
+            title: "Furadeira Parafusadeira Sem Fio A Bateria Tb-12e 12v 3/8 10mm Com Maleta E Acessórios The Black Tools",
+            description: "Furadeira Parafusadeira Sem Fio A Bateria Tb-12e 12v 3/8 10mm Com Maleta E Acessórios The Black Tools",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_684354-MLA96114946563_102025-F.webp",
+            link: "https://mercadolivre.com/sec/2qNSKMJ"
+        },
+        {
+            id: 4,
+            title: "Desix Floral Bactericida Limpeza Ar Condiciona 1litro - Kit",
+            description: "Desix Floral Bactericida Limpeza Ar Condiciona 1litro - Kit",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_699603-MLB88806251460_082025-F.webp",
+            link: "https://mercadolivre.com/sec/2VHhn2x"
+        },
+        {
+            id: 5,
+            title: "Filme Mascaramento Eletrostático Com Fita Adesiva 1,2m X 20m",
+            description: "Filme Mascaramento Eletrostático Com Fita Adesiva 1,2m X 20m",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_912429-MLA95974204413_102025-F.webp",
+            link: "https://mercadolivre.com/sec/2rCMRQb"
+        },
+        {
+            id: 6,
+            title: "Jogo De Chaves Fenda Phillips Isolada Eletricista Iec60900 Vonder 1.000v",
+            description: "Jogo De Chaves Fenda Phillips Isolada Eletricista Iec60900 Vonder 1.000v",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_633368-MLA95695169180_102025-F.webp",
+            link: "https://mercadolivre.com/sec/1yFP5yR"
+        },
+        {
+            id: 7,
+            title: "Kit 6 Pincel Para Pintura Tinta Latex Acrilica Jogo Pinceis De Pintura P/ Parede Trincha Multiuso Gurumania",
+            description: "Kit 6 Pincel Para Pintura Tinta Latex Acrilica Jogo Pinceis De Pintura P/ Parede Trincha Multiuso Gurumania",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_942756-MLA95379749613_102025-F.webp",
+            link: "https://mercadolivre.com/sec/2rUc4ff"
+        },
+        {
+            id: 8,
+            title: "Escada Residêncial Em Alumínio 5 Degraus Real",
+            description: "Escada Residêncial Em Alumínio 5 Degraus Real",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_983696-MLA95836457741_102025-F.webp",
+            link: "https://mercadolivre.com/sec/1Ma71fB"
+        },
+        {
+            id: 9,
+            title: "Furadeira Bosch Gbh 2-24 D 820w, em estojo Azul",
+            description: "Furadeira Profissional Bosch - Potente e Durável para Instalação de Ar Condicionado",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_717115-MLA99575012278_122025-F.webp",
+            link: "https://mercadolivre.com/sec/1ExAZHN"
+        },
+        {
+            id: 10,
+            title: "Trena Profissional 10m Rocha Distribuições Fita Aço Carbono Trava Automática",
+            description: "Trena Profissional 10m - Fita de Aço Carbono com Trava Automática",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_815710-MLA99623661510_122025-F.webp",
+            link: "https://mercadolivre.com/sec/1zSALbC"
+        },
+        {
+            id: 11,
+            title: "Nível De Mão Nivelador",
+            description: "Nível de Mão Profissional - Precisão para Instalação de Ar Condicionado",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_665358-MLA99639298136_122025-F.webp",
+            link: "https://mercadolivre.com/sec/1FycanR"
+        },
+        {
+            id: 12,
+            title: "Kit Jogo 3 Alicates Utilidades Variadas Universal Corte Bico",
+            description: "Kit Jogo 3 Alicates - Universal, Corte e Bico para Diversas Utilidades",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_818739-MLA96061433598_102025-F.webp",
+            link: "https://mercadolivre.com/sec/2SADqTt"
+        },
+        {
+            id: 13,
+            title: "Martelo Profissional",
+            description: "Martelo Profissional - Ferramenta Essencial para Instalação",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_965337-MLA97402349830_112025-F.webp",
+            link: "https://mercadolivre.com/sec/31vDJ5Z"
+        },
+        {
+            id: 14,
+            title: "Bomba De Vácuo 1.5 Cfm Refrigeração Simples Estágio 1/4hp",
+            description: "Bomba de Vácuo para Refrigeração - 1.5 CFM Simples Estágio",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_931290-MLA99452266868_112025-F.webp",
+            link: "https://mercadolivre.com/sec/1DBir74"
+        },
+        {
+            id: 15,
+            title: "Manifold R410 R22 R407 Mangueiras 1,5m Inverter Premium Eos",
+            description: "Manifold R410 R22 R407 - Mangueiras 1,5m Premium para Refrigeração",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_931290-MLA99452266868_112025-F.webp",
+            link: "https://mercadolivre.com/sec/2si8EG7"
+        },
+        {
+            id: 16,
+            title: "Cortador Tubo Cobre Roller Vix Dszh Wk-532",
+            description: "Cortador de Tubo de Cobre para Refrigeração e Ar Condicionado",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_709197-MLA99924631957_112025-F.webp",
+            link: "https://mercadolivre.com/sec/1wQcQqr"
+        },
+        {
+            id: 17,
+            title: "Flangeador De Tubos Vix 3/16 A 5/8 Ct-525",
+            description: "Flangeador de Tubos Profissional - 3/16 a 5/8",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_725942-MLB72205801350_102023-F.webp",
+            link: "https://mercadolivre.com/sec/1hRS2rJ"
+        },
+        {
+            id: 18,
+            title: "Kit Completo Com 12 Chaves Combinada E Jogo De Soquetes 46 Peças",
+            description: "Kit Completo de Chaves e Soquetes - 46 Peças com Maleta",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_887696-MLA99936159371_112025-F.webp",
+            link: "https://mercadolivre.com/sec/2Srkn8b"
+        },
+        {
+            id: 19,
+            title: "Kit Jogo Chave Inglesa Ajustável Tubos Reforçada Regulagem",
+            description: "Kit Chave Inglesa Ajustável - Reforçada com Regulagem para Tubos",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_647091-MLB102650574451_122025-F-kit-jogo-chave-inglesa-ajustavel-tubos-reforcada-regulagem.webp",
+            link: "https://mercadolivre.com/sec/2bcEGnB"
+        },
+        {
+            id: 20,
+            title: "Testo 552i - Sonda Vacuômetro Sem Fio Controlada Aplicativo",
+            description: "Vacuômetro Digital Testo 552i - Controle por Aplicativo sem Fio",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_608741-MLA99950928727_112025-F.webp",
+            link: "https://mercadolivre.com/sec/1pCEo1V"
+        },
+        {
+            id: 21,
+            title: "Chaves Allen Profissionais",
+            description: "Jogo de Chaves Allen - Ferramentas Essenciais para Manutenção",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_747960-MLA100109805525_122025-F.webp",
+            link: "https://mercadolivre.com/sec/31h2xGh"
+        },
+        {
+            id: 22,
+            title: "Kit 10 Fitas Isolantes Nove54 Preta Antichama 19mm X 10m 600V",
+            description: "Kit com 10 Fitas Isolantes Antichama - 19mm x 10m 600V",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_819565-MLA99509045120_112025-F.webp",
+            link: "https://mercadolivre.com/sec/1E8m6vr"
+        },
+        {
+            id: 23,
+            title: "Abraçadeiras Nylon Enforca Gato 9 X 500mm 50 Unidades Lacre",
+            description: "Abraçadeiras de Nylon - 9 x 500mm Pacote com 50 Unidades",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_960035-MLB98866533925_112025-F-abracadeiras-nylon-enforca-gato-9-x-500mm-50-unidades-lacre.webp",
+            link: "https://mercadolivre.com/sec/1zuUXVG"
+        },
+        {
+            id: 24,
+            title: "Estilete Emborrachado 18mm Vonder Profissional Es-218",
+            description: "Estilete Profissional Emborrachado - 18mm Vonder",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_670200-MLA100093954129_122025-F.webp",
+            link: "https://mercadolivre.com/sec/1ra5qZV"
+        },
+        {
+            id: 25,
+            title: "Escada 12 degraus Garden Life multifuncional 3,32m alumínio reforçado",
+            description: "Escada Multifuncional 12 Degraus - 3,32m Alumínio Reforçado",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_984625-MLA99766093922_122025-F.webp",
+            link: "https://mercadolivre.com/sec/1UU6JPK"
+        },
+        {
+            id: 26,
+            title: "Serra Copo Haste Pino 65mmx150mm Cano Longo Ar Condicionado",
+            description: "Serra Copo para Ar Condicionado - 65mm x 150mm Haste Longa",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_785526-MLB104305115004_012026-F.webp",
+            link: "https://mercadolivre.com/sec/2q2rA77"
+        },
+        {
+            id: 27,
+            title: "Fita Adesiva Elastomerica 45mm X 3mm X 10m",
+            description: "Fita Elastomérica Adesiva - 45mm x 3mm x 10m para Isolamento",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_775013-MLB94368998521_102025-F.webp",
+            link: "https://mercadolivre.com/sec/2bKj1CU"
+        },
+        {
+            id: 28,
+            title: "Fita Laminada Adesiva 45mmx100m Isolamento Térmico",
+            description: "Fita Aluminizada Adesiva - 45mm x 100m para Isolamento Térmico",
+            image: "https://http2.mlstatic.com/D_NQ_NP_2X_683527-MLB94610288864_102025-F.webp",
+            link: "https://mercadolivre.com/sec/2QhJa1E"
+        }
+    ];
 
         // ==================== FUNÇÕES PRINCIPAIS ====================
         
